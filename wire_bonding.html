@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Wire bonding</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <script src="js/scripts.js"></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/animation.css" type="text/css" media="all" />
+        <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101176990);</script>
+<script async src="//static.getclicky.com/js"></script>
+    </head>
+    
+    
+    <body onload=setPaths()>
+        
+<header class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1> Ultrasonic Wire Bonding</h1>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+<a class="navbar-brand" href="index.html">MS</a>
+</nav>
+        
+<main class="container">
+<div class="row">
+
+<section class= "col-md-8" id="technology">
+    <h2>Technology</h2>
+    <p>Ultrasonic wire bonding is a technology broadly used in the eletronic industry as a mean of interconnection of different components inside of an assembly by microwelding of thin wires. These components include bare semiconductor die, metalised ceramic substrate, package leadframe or printed circuit board.</p>
+    <p>At the core of the process is a piezzo electric transducer. This is a component which reacts to applied voltage by changing its length. The transducer is connected to a an AC power supply on frequencies in a magnitude of tenths to hundreds kHz, a so called ultrasonic generator. The most common frequency at the time is 60 kHz - this means that the transducer is extending and shrinking 60000 times per second.</p>
+    <p>Next, there is a bonding tool mechanically connected to the transducer. At the tip of the tool, the actual wire bonding process takes place. The whole process operates in resonance. In this way, the amplitude of the vibrations measured on the bonding tool's tip is maximal. To achieve resonance, the ultrasonic generator measures current and voltage and uses this in an feedback algorithm to fine-adjust frequency. At resonance, the ultrasonic generator current is maximal and voltage is minimal. The ratio of voltage and current, also called impedance, gives information about the damping of the whole system. The larger the impedance, the smaller the amplitudes of the vibration. For a wire bonding operator, impedance is mostly important at the time when he makes adjustments on the tool height or changes a tool. For instance, if the connection of the tool to transducer is loose, there will be some damping and the impedance will be higher.</p>
+
+<div class="anim_wrap">
+<svg version="1.1" class="anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 300" enable-background="new 0 0 400 300" xml:space="preserve">
+<g id="transducer_tool"><path d="M 28 100 l 0 150 l 5 50 l 5 0 l 5 -50 l 0 -150 z" fill="#0000ff" /></g>   
+<g id="transducer_transducer"><path  d="M 20 40 L 20 100 L 320 100 L 320 40 L 20 40 z" fill="#ff0000" /></g>
+<g id="transducer_holder"><path  d="M 160 20 l 40 0 l 0 100 l -40 0 z" fill="#000000" /></g>
+<g class="transducer_label"><text x="30" y="12" font-family="Helvetica,Helvetica" font-size="12" font-weight="400" fill="#ff0000" >Transducer</text></g>
+<g class="transducer_label"><text x="160" y="12" font-family="Helvetica,Helvetica" font-size="12" font-weight="400" fill="#000000" >Transducer Holder</text></g>
+<g class="transducer_label"><text x="85" y="200" font-family="Helvetica,Helvetica" font-size="12" font-weight="400" fill="#0000ff" >Bonding Tool</text></g>
+</svg>   
+</div>
+
+<p>For a connection ("bond") to be made, a wire must be placed underneath the tool. Then, force is applied to fix the wire between the tool and the surface for the time the ultrasonic welding takes place. In principle, two wire guiding mechanisms are used. Either the wire is guided through the hollow axis of the bonding tool or it is guided sideways under the groove on the tool's tip. The former is used for bonding fine golden wires ("ball bonding"), the latter typically for aluminium or copper wires ("wedge bonding").</p>
+<p>After the first bond, the wire is guided in a pre-defined way, creating a loop to a spot where the second bond is to be made. Here again, the wire is pushed to the surface and is welded by lateral vibrations of the tool. Following that, the wire needs to be detached from the surface and a new wire segment has to be placed in a position enabling the first bond of the following loop to be made. The detaching of the wire is made either using the edge of the tool (in case of fine wires) or using a cutter (wires thicker than 100 µm).</p>
+</section>
+
+
+ <aside class="col md-4" id="experience">
+    <div class="p-3 mb-3 bg-light rounded">
+    <h4 class="font-italic">My experience</h4>
+    <p class="mb-0">
+        I have practical experience with wire bonding since 2015. In my current job I am the responsible person for this process. This means that I am the one who programs the machines, manages the production documentation, assesses new product designs and chooses new machines.
+        
+    </p>
+    </div>
+</aside>
+
+
+</div>
+<div class="row">
+
+<section class= "col-md-8 md-left" id="head_movement">
+       <h2>Bonding head movement</h2>
+       <h3>Heavy wire</h3>
+       <p>Bonding heads for heavy wire bonding (i.e. bonding "thick" wires) consist of bonding tool, cutter and wire guide. The bonding tool has a V-shaped groove at the tip, which fixes the bonding wire in the right position for welding. The wire guide is a plastic part, which guides the wire sideways under the bonding tool. The cutter is a sharp piece of metall, which cuts the wire after the last bond of the loop is welded. The cutter can be located either between bonding tool and wire guide (so called rear cut) or before the bonding tool, opposite to the wire guide. This is then called front cut.</p>
+       <p>Let's explain the bonding head movement with the example of a bonding head in the rear cut setup: </p>
+       <ul>
+           <li>Initially, short wire segment is under the whole bottom part of the bonding tool.</li>
+           <li>The whole bonding head deceases to the surface.</li>
+           <li>Shortly before the surface is reached, the bonding head decelerates and moves down slowly, waiting for touchdown signal.</li>
+           <li>Upon touchdown, the bonding tool starts vibrating, and welding process starts.</li>
+           <li>During welding, the applied pressure and softening of the wire leads to wire deformation.</li>
+           <li>After about 100 ms of welding, the first bond is formed.</li>
+           <li>Then, the bonding head moves to the next bond. Because the wire was not cut, a new wire is fed through the wire guide.</li>
+           <li>Defined motion of the bond head takes place, forming a loop of the desired form.</li>
+           <li>The second bond is made.</li>
+           <li>Before the bond head raises, the wire is cut between the wire guide and the bonding tool. However, it is only cut to about 70 % of its original diameter, so that new wire can be fed into the bonding tool groove. </li>
+           <li>To feed a new wire into the groove, the head moves first up, then further into the direction of the loop and down again. At the end of this motion, the wire sits in the wedge of the bonding tool.</li>
+           <li>Now, the rest of the previously partially cut wire is teared by another short lateral motion in the loop direction.</li>
+           <li>In a next step, the bonding head may continue to the next wire loop, because the wire is again in the initial position.</li>
+       </ul>
+
+<div class="anim_wrap">
+    <svg version="1.1" class="anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 800" enable-background="new 0 0 400 800" xml:space="preserve">
+        <g id="tool"><path d="M 6 100 L 20 440 L 95 440 L 102 100 L 6 100 z" fill="#3030EE" /></g>
+        <g id="wire1"><path d="M 95 440 L 20 440 L 15 435 L 13 445 L 20 450 L95 450 Z"  fill="red"/></g>
+        <g id="wire_feed"><path d="M 140 387 L 87 440 L 80 440 L 85 449 L 94 447 L 147 394 L 140 387 z" fill="#ff0000"/></g>
+        <g id="guide"><path  d="M 102 416 L 163 416 L 313 137 L 169 138 L 102 416 z" fill="#404040" /></g>  
+        <g id="cutter"><path d="M 129 20 L 107 297 L 116 288 L 164 0 L 129 20 z" fill="#606060" /></g>  
+        <g id="wire2"><path d="M 95 440 L 20 440 L 15 435 L 13 445 L 20 450 L95 450 Z"  fill="red"/></g>
+        <g id="wire3"><rect x="80" y="635" width="150" height="10" transform="rotate(-40,90,630)" fill="red"/></g>
+        <g id="wire4"><rect x="202" y="545" width="110" height="10" transform="rotate(66,200,545)" fill="red"/></g>
+        <g id="wire5"><path d="M 95 440 L 20 440 L 15 435 L 13 445 L 20 450 L95 450 Z" fill="red"/></g>
+    </svg>
+</div>
+
+</section>   
+   
+</div>
+
+<br />
+<br />
+</main>
+
+ <footer class="navbar navbar-light bg-light fixed-bottom">
+       
+        <p>
+        <a id="eMail" class="fas fa-envelope-open icon" onclick="decode_eMail()">&nbsp; E-Mail</a>
+        <a class="fab fa-linkedin icon" href="https://www.linkedin.com/in/michalsvoboda1/?locale=en_US">&nbsp; LinkedIn</a>
+        <a class="fab fa-github-square icon" href="https://github.com/michsvob">&nbsp; Github</a>
+        
+        </p>
+         <p class="d-none d-md-block float-right">
+            <a href="#">Back to top</a>
+        </p>
+        
+        
+</footer>
+</body>
+</html>

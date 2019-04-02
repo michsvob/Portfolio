@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Wire bonding head movement simulation</title>
+        <script src="js/scripts.js"></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/animation.css" type="text/css" media="all" />
+    </head>
+    <body onload=setPaths()>
+     <svg id="tool" height="600px" width="600px">
+         <path fill="#3030EE" stroke="red" stroke-width="1" d="M 6.180626599284722 163 L 19.684973895819155 441.82292281568084 L 95.13119524705147 439.50547597145976 L 102.18062659928472 164 L 6.180626599284722 163 z"></path>
+     
+     </svg>
+     
+     <svg id="guide" height="600px" width="600px">
+         <path fill="#404040" stroke="red" stroke-width="1" d="M 102.18062659928472 416 L 163.18062659928472 416 L 313.1806265992847 137 L 169.18062659928472 138.00000000000003 L 102.18062659928472 416 z"></path>
+     
+     </svg>
+     <svg id="cutter" height="600px" width="600px">
+         <path fill="#606060" stroke-width="1" stroke="red" d="M 129.01041383332725 20.79000000000002 L 107.18062659928472 297.00000000000006 L 116.88275425885917 288.0900000000001 L 164.18062659928472 0 L 129.01041383332725 20.79000000000002 z"></path>
+     </svg>
+     
+     <svg id="wire1" height="600px" width="600px">
+         <path fill="#606060" stroke-width="10" stroke="red" d="M 95.13119524705147 439.50547597145976 L 19.684973895819155 441.82292281568084 L 8.105609560255601 435.38994262925655 "></path>
+     </svg>
+     
+     <svg id="wire2" height="600px" width="600px">
+         <path stroke-width="10" stroke="red" d="M 267.6912777562965 243.8698872679046 C 141.01323072723642 301.83598762451356 152.68172149498943 374.77666390657976 95.13119524705147 439.50547597145976 C 95.13119524705147 439.50547597145976 95.13119524705147 439.50547597145976 95.13119524705147 439.50547597145976"></path>
+     </svg>
+    </body>
+</html>

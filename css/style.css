@@ -1,0 +1,78 @@
+body{
+    background-color:#FFFFFF;
+}
+
+header{
+    text-align:center;
+}
+
+h2{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.jumbotron{
+    margin-bottom:0;
+}
+.navbar{
+    width:100%;
+    z-index:1;
+}
+.row{
+    position:relative;
+}
+.icon{
+    color:#111111;
+    padding-left:0.8em;
+    font-weight: normal;
+}
+.logo{
+    max-width:12em;
+    padding:1.5em;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.skill{
+    display:none;
+    font-size:0.8em;
+    border-radius: 0.5rem;
+    color: #fff;
+    padding:0.5rem;
+    position:absolute;
+    opacity:0.99;
+    background-color: #17a2b8; 
+}
+li:hover + .skill{
+    display:block;
+}
+
+
+.carousel-item{
+    max-height:500px;
+}
+.carousel-image{
+    width:100%;
+}
+
+@media screen and (max-width: 490px){
+    .carousel-image{
+        height:280px;
+        width:auto;
+    }
+}
+    
+.rounded{
+   border-radius: 4rem!important
+}
+
+.project_img{
+    max-width: 90vw; 
+    max-height: 60vh;
+}    
+
+#experience{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}

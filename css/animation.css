@@ -1,0 +1,188 @@
+body{
+    --tooltravel:200px;
+    --tooltravel-override:205px;
+    --loop1x:130px;  --loop1y:100px;
+    --loop2x:190px;  --loop2y:50px;
+    --bond2x:220px; --bond2y:200px;
+    --cutx: 210px; --cuty:350px;
+    --bond22x:220px; --bond22y:210px;
+    --tailx:220px; --taily:130px;
+    --tail2x:270px; --tail2y:200px;
+    --tail3x:370px; --tail3y:190px;
+    --tail_wire3x:350px;
+    --endx:370px; --endy:0px;
+    --duration:5s;
+    background-color:#FFFFFF;
+}
+
+.anim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.anim_wrap {
+  height: 0;
+  padding-top: 100%;
+  position: relative;
+}
+
+@keyframes tool {
+  0%   {transform:translateX(0) translateY(0);} /*move down*/
+  5%   {transform:translateX(0) translateY(var(--tooltravel));}
+  10%  {transform:translateX(0) translateY(var(--tooltravel-override));}
+  15%  {transform:translateX(0) translateY(var(--tooltravel));}
+  20%  {transform:translateX(0) translateY(var(--tooltravel));}
+  25%  {transform:translateX(var(--loop2x)) translateY(var(--loop2y));}
+  30%  {transform:translateX(var(--bond2x)) translateY(var(--bond2y));}
+  35%  {transform:translateX(var(--bond22x)) translateY(var(--bond22y));}
+  40%  {transform:translateX(var(--bond2x)) translateY(var(--bond2y));}
+  45%  {transform:translateX(var(--tailx)) translateY(var(--taily));}
+  50%  {transform:translateX(var(--tail2x)) translateY(var(--tail2y));}
+  55%  {transform:translateX(var(--tail3x)) translateY(var(--tail3y));}
+  100% {transform:translateX(var(--endx)) translateY(var(--endy));}
+}
+
+@keyframes wire_feed {
+  0%   {transform:translateX(0) translateY(0);} /*move down*/
+  5%   {transform:translateX(0) translateY(var(--tooltravel));}
+  
+  15%  {transform:translateX(0) translateY(var(--tooltravel));}
+  20%  {transform:translateX(0) translateY(var(--tooltravel));}
+  25%  {transform:translateX(var(--loop2x)) translateY(var(--loop2y));}
+  30%  {transform:translateX(var(--bond2x)) translateY(var(--bond2y));}
+  35%  {transform:translateX(var(--bond22x)) translateY(var(--bond22y));}
+  40%  {transform:translateX(var(--bond2x)) translateY(var(--bond2y));}
+  45%  {transform:translateX(var(--tailx)) translateY(var(--taily));}
+  50%  {transform:translateX(var(--tail2x)) translateY(var(--tail2y));}
+  55%  {transform:translateX(var(--tail3x)) translateY(var(--tail3y));}
+  100% {transform:translateX(var(--endx)) translateY(var(--endy));}
+}
+
+@keyframes cutter {
+  0%   {transform:translateX(0) translateY(0);} /*move down*/
+  5%   {transform:translateX(0) translateY(var(--tooltravel));}
+  10%  {transform:translateX(0) translateY(var(--tooltravel-override));}
+  15%  {transform:translateX(0) translateY(var(--tooltravel));}
+  20%  {transform:translateX(0) translateY(var(--tooltravel));}
+  25%  {transform:translateX(var(--loop2x)) translateY(var(--loop2y));}
+  30%  {transform:translateX(var(--bond2x)) translateY(var(--bond2y));}
+  35%  {transform:translateX(var(--bond22x)) translateY(var(--bond22y));}
+  40%  {transform:translateX(var(--cutx)) translateY(var(--cuty));}
+  45%  {transform:translateX(var(--tailx)) translateY(var(--taily));}
+  50%  {transform:translateX(var(--tail2x)) translateY(var(--tail2y));}
+  55%  {transform:translateX(var(--tail3x)) translateY(var(--tail3y));}
+  100% {transform:translateX(var(--endx)) translateY(var(--endy));}
+}
+
+@keyframes wire1 {
+  0%   {transform:translateX(0) translateY(0);}
+  5%   {transform:translateX(0) translateY(var(--tooltravel));}
+  100% {transform:translateX(0) translateY(var(--tooltravel));}
+}
+
+@keyframes wire2 {
+  0%   {opacity:0; transform:translateX(var(--tail_wire3x)) translateY(var(--tail3y));}
+  50%  {opacity:0; transform:translateX(var(--tail_wire3x)) translateY(var(--tail3y));}
+  55%  {opacity:1; transform:translateX(var(--tail3x)) translateY(var(--tail3y));}
+  100% {transform:translateX(var(--endx)) translateY(var(--endy));}
+}
+
+@keyframes wire3 {
+  0%   {opacity:0;}
+  20%  {opacity:0;}
+  25%  {opacity:1;}
+  100%  {opacity:1;}
+}
+
+@keyframes wire4 {
+  0%   {opacity:0;}
+  25%  {opacity:0;}
+  30%  {opacity:1;}
+  100%  {opacity:1;}
+}
+
+@keyframes wire5 {
+  0%   {opacity:0; transform:translateX(var(--bond2x)) translateY(var(--bond2y));}
+  30%  {opacity:0; transform:translateX(var(--bond2x)) translateY(var(--bond2y));}
+  31%  {opacity:1; transform:translateX(var(--bond2x)) translateY(var(--bond2y));}
+  100% {opacity:1; transform:translateX(var(--bond2x)) translateY(var(--bond2y));}
+}
+
+#tool, #guide{
+    animation-name: tool;
+    animation-duration: var(--duration);
+    animation-iteration-count:infinite;
+    
+}
+
+#wire_feed{
+    animation-name: wire_feed;
+    animation-duration: var(--duration);
+    animation-iteration-count:infinite;
+}
+
+
+
+#cutter{
+    animation-name: cutter;
+    animation-duration: var(--duration);
+    animation-iteration-count:infinite;
+    /*animation-timing-function:linear;*/
+}
+
+#wire1{
+    animation-name: wire1;
+    animation-duration: var(--duration);
+    animation-iteration-count:infinite;
+    /*animation-timing-function:linear;*/
+}
+#wire2{
+    animation-name: wire2;
+    animation-duration: var(--duration);
+    animation-iteration-count:infinite;
+}
+
+#wire3{
+    animation-name: wire3;
+    animation-duration: var(--duration);
+    animation-iteration-count:infinite;
+    /*animation-timing-function:linear;*/
+}
+#wire4{
+    animation-name: wire4;
+    animation-duration: var(--duration);
+    animation-iteration-count:infinite;
+    /*animation-timing-function:linear;*/
+}
+#wire5{
+    animation-name: wire5;
+    animation-duration: var(--duration);
+    animation-iteration-count:infinite;
+}
+
+@keyframes transducer_tool {
+  0%   {transform:translateX(0px) skewX(2deg)}
+  50%  {transform:translateX(0px) skewX(-2deg)}
+  100%  {transform:translateX(0px) skewX(2deg)}
+}
+
+@keyframes transducer_transducer {
+  0%   {transform: translateX(10px) scale(1,1);}
+  50%  {transform: translateX(0px) scale(1.0667,1);}
+  100%  {transform: translateX(10px) scale(1,1);}
+}
+
+#transducer_transducer{
+    animation-name: transducer_transducer;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+}
+
+#transducer_tool{
+    animation-name: transducer_tool;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+}

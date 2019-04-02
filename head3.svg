@@ -1,0 +1,13 @@
+<svg version="1.1" class="anim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 700" enable-background="new 0 0 400 700" xml:space="preserve">
+        <g id="tool"><path d="M 6 163 L 20 440 L 95 440 L 102 164 L 6 163 z" fill="#3030EE" /></g>
+        <g id="wire1"><path d="M 95 440 L 20 440 L 15 435 L 13 445 L 20 450 L95 450 Z"  fill="red"/></g>
+        <g id="wire_feed"><path d="M 140 387 L 87 440 L 80 440 L 85 449 L 94 447 L 147 394 L 140 387 z" fill="#ff0000"/></g>
+        <g id="guide"><path  d="M 102 416 L 163 416 L 313 137 L 169 138 L 102 416 z" fill="#404040" /></g>  
+        <g id="cutter"><path d="M 129 20 L 107 297 L 116 288 L 164 0 L 129 20 z" fill="#606060" /></g>  
+        <g id="wire2"><path d="M 95 440 L 20 440 L 15 435 L 13 445 L 20 450 L95 450 Z"  fill="red"/></g>
+       
+        <g id="tool2"><path d="M 6 163 L 20 440 L 95 440 L 102 164 L 6 163 z" fill="#3030EE" transform="translate(220,200)" /></g>
+        <g id="tool3"><path d="M 6 163 L 20 440 L 95 440 L 102 164 L 6 163 z" fill="#3030EE" transform="translate(190,50)" /></g>
+        <g id="wire3"><rect x="90" y="630" width="150" height="10" transform="rotate(-40,90,630)" fill="red"/></g>
+        <g id="wire4"><rect x="70" y="390" width="250" height="10" transform="rotate(40,100,640)" fill="red"/></g>
+    </svg>

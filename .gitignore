@@ -1,0 +1,14 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.MICH_Capstone.Rproj
+*.pages
+rsconnect
+*.Rproj
+*.DS_Store
+submission*
+*.omber
+bonder.svg
+json_komplet.txt
+json_today.txt

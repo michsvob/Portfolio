@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    
+    <title>Michal Svoboda - Datron animator</title>
+    <script src="js/scripts.js"></script>          
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101176990);</script>
+<script async src="//static.getclicky.com/js"></script>
+                                    
+</head>
+                                    
+<body data-spy="scroll" data-target="#collapsibleNavbar">
+                                            
+<header class="jumbotron jumbotron-fluid">
+    <div id="container">
+        <h1> Datron animator</h1>
+    <p> Michal Svoboda - Projects</p>
+    </div>
+</header>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+<a class="navbar-brand" href="index.html">MS</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="collapsibleNavbar">
+<ul data-toggle="collapse" data-target=".navbar-collapse.show" class="navbar-nav" >
+<li><a class="nav-link active" href="#Project">Project</a></li> 
+<li><a class="nav-link" href="#Usage">Usage</a></li>
+<li><a class="nav-link" href="#Example">Example</a></li> 
+</ul>
+</div>
+</nav>
+<main class="container">
+<section id="Project">
+    <h2>Project</h2>
+    <p>My company owns a couple of CNC machines from the company Datron, which are used for automated dispensing of adhesives on our products. They are quite robust and reliable, but their programming is a nightmare. Especially when you need to minimize the downtime caused by programming directly on the machine and you cannot allow for mistakes, because the produced quantities are high.</p>
+    <p>This is why I decided to write a script, which reads in the CNC program and plots the trajectories the dispensing head follows. In this way you can easily check whether the changes you made in the program offline make sense and thus mitigate the risk of crash.</p>
+    <p>The aim of this project is being able to visualise and verify what your CNC script makes the machine do. It therefore does not replace the need to learn the CNC commands, yet it makes the learning process significantly easier and less costly. In addition, it makes the comparison of different CNC programs and version management a matter of seconds.</p>
+    
+    <img class="project_img" src="img/datron_machine.jpg" alt="Dispensing machine Datron" />
+</section>
+
+<section id="Usage">
+    <h2>Usage</h2>
+    <p>To be able to use my simulation library you need a program you want to visualise first. These programs are stored in the Datron CNC machine file structure as .MCR files. If you just want to try it, you may as well use the sample MCR file I provide on my Github.</p>
+    <p>My script is distributed as a Python 3 library. Copy the file datron_animator.py into your working folder. There create a new Python script, where you include following lines:</p>
+    <p>
+    <code>
+        import datron_animator <br />
+        a = Datprog("example.mcr") #generate Datron Object <br />
+        plot_path(a, "y", "x") #plot path - y axis on y axis and x axis on x axis <br />
+        anim(a,100) #animate path 10 frames per second <br />
+    </code>    
+    </p>
+    <p>The program has the following dependencies (libraries you need to install first):</p>
+    <p>
+    <code>
+    matplotlib <br />
+    pandas <br />
+    numpy <br />
+    </code>
+    </p>
+    <p>Get the code and a sample Datron MCR File from my <a href="https://github.com/michsvob/Datron-Animator"> Datron Animator Github repository <i class="fab fa-github"></i></a> </p>
+</section>
+ 
+ <section id="Example">
+     <h2>Example</h2>
+     <p>This is an example of output for an example product. It shows the trajectories the dispensing head moves along. In this case, the program consists of applying dispensing material on 29 products after some motions during the start-up (measurement of magazine height) and cleaning the dispensing needle. Along with this graph output, my script also outputs a list of coordinates and a motion animation.</p>
+     <img class="project_img" src="img/datron.png" alt="Datron example output" />
+ </section>
+<br />
+<br />
+</main>                                                                                                                            
+
+<footer class="navbar navbar-light bg-light fixed-bottom">
+       
+        <p>
+        <a id="eMail" class="fas fa-envelope-open icon" onclick="decode_eMail()">&nbsp; E-Mail</a>
+        <a class="fab fa-linkedin icon" href="https://www.linkedin.com/in/michalsvoboda1/?locale=en_US">&nbsp; LinkedIn</a>
+        <a class="fab fa-github-square icon" href="https://github.com/michsvob">&nbsp; Github</a>
+        
+        </p>
+         <p class="d-none d-md-block float-right">
+            <a href="#">Back to top</a>
+        </p>
+        
+        
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>                               
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
