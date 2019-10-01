@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Wire bonding</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <script src="js/scripts.js"></script>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    </head>
+    
+    <body onload=setPaths()>
+        
+<header class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1> Bee Project</h1>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+<a class="navbar-brand" href="index.html">MS</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="collapsibleNavbar">
+<ul data-toggle="collapse" data-target=".navbar-collapse.show" class="navbar-nav" >
+<li><a class="nav-link active" href="#project_scope">Scope</a></li> 
+<li><a class="nav-link" href="#technical_solution">Solution</a></li>
+</ul>
+</div>
+</nav>
+
+<main class="container">
+<div class="row">
+<section class= "col-md-8" id="project_scope">
+    <h2>Target</h2>
+    <p>Building a system for remote monitoring of the current bee conditions.</p>
+    <p>This is the project I am currently working on, so the documentation below is being continuously updated, as well as the connected Github repository.</p>
+    <img class="project_img" src="img/hives.jpg" alt="Bee hives" />
+</section>
+
+<section class= "col-md-8" id="technical_solution">
+    <h2>Technical solution</h2>
+    <img class="project_img" src="img/computerbox.jpg" alt="Computer Box" />
+    <h3>Sensors</h3>
+    <ul>
+        <li>Weight changes of the whole bee hive</li>
+        <li>Temperature on defined spots</li>
+        <li>Humidity inside and outside the hive</li>
+        <li>Illumination of flight entrance</li>
+        <li>Measurement of barometric pressure</li>
+    </ul>
+    <h4>1. Scale</h4>
+    <p>I chose Bosche H40A load cell (200 kg) to measure the weight and fixed it to two aluminium plates. I used those which I had readily available, but normally I would prefer slightly larger ones. OpenScale microcontroller from Sparkfun has been used to convert the signal from the scale and communicate with Arduino over serial interface.</p>
+    <img class="project_img" src="img/scale1.jpg" alt="Scale" />
+    <h4>2. Temperature sensors</h4>
+    <p>Several temperature sensors are used in the project:</p>
+    <ul>
+        <li>On-board temperature sensor from OpenScale to measure temperature in the computer case. </li>
+        <li>Temperature and humidity sensor DHT22 to measure temperature and humidity inside the bee hive.</li>
+        <li>BMP280 barometric pressure sensor used also for measurement of outside temperature.</li>
+    </ul>
+    <h3>Controller</h3>
+    <ol>
+        <li>Remote radio communication</li>
+        <li>Low power</li>
+        <li>Coding</li>
+    </ol>
+    <p>I use <a href="https://www.arduino.cc/en/Main.ArduinoBoardMKRFox1200">MKR FOX 1200</a> for the radio communication. This Arduino module uses <a href="https://www.sigfox.com/">Sigfox network</a> to send messages. The advantage of this is the simple low weight communication protocoll enabling low energy consumption, high signal coverage and low costs.</p>
+    <h4>Code</h4>
+    <p>See my <a class="fab fa-github icon" href="https://github.com/michsvob/bienenprojekt">&nbsp; Github project page</a> for the Arduino source code.</p>
+   
+   <h3>Presentation</h3>
+   <ul>
+        <li>Cloud dashboard</li>
+        <li>Notifications</li>
+    </ul>
+   <p>For small scale IoT projects, Thinger.io is a suitable platform, since it has some free features. See the <a href="https://console.thinger.io/#/dashboard/Bienenvolk1?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJEYXNoYm9hcmRfQmllbmVudm9sazEiLCJ1c3IiOiJtaWNob3NsYXYifQ.Cgl5FwivATOmBpEO86_56jVkOl33d4sCl7ExWaVa5Cg">prototype dashboard.</a></p>
+    <h3>Ideas for improvement</h3>
+    <ul>
+        <li>Camera</li>
+        <li>Extension for another bee hive</li>
+    </ul>
+</section>
+   
+</div>
+
+<br />
+<br />
+</main>
+
+ <footer class="navbar navbar-light bg-light fixed-bottom">
+       
+        <p>
+        <a id="eMail" class="fas fa-envelope-open icon" onclick="decode_eMail()">&nbsp; E-Mail</a>
+        <a class="fab fa-linkedin icon" href="https://www.linkedin.com/in/michalsvoboda1/?locale=en_US">&nbsp; LinkedIn</a>
+        <a class="fab fa-github-square icon" href="https://github.com/michsvob">&nbsp; Github</a>
+        
+        </p>
+         <p class="d-none d-md-block float-right">
+            <a href="#">Back to top</a>
+        </p>
+        
+        
+</footer>
+</body>
+</html>
