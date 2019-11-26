@@ -35,56 +35,33 @@
 <main class="container">
 <div class="row">
 <section class= "col-md-8" id="project_scope">
-    <h2>Target</h2>
-    <p>Building a system for remote monitoring of the current bee conditions.</p>
-    <p>This is the project I am currently working on, so the documentation below is being continuously updated, as well as the connected Github repository.</p>
+    <h2>Scope</h2>
+    <p>Building an low power autonomous system for remote monitoring of the current bee conditions, concretely weight changes, temperature in the beehive and weather conditions - outside temperature, relative humidity of outside air, illumination intensity at the beehive entrance and barometric air pressure.</p>
     <img class="project_img" src="img/hives.jpg" alt="Bee hives" />
 </section>
 
 <section class= "col-md-8" id="technical_solution">
     <h2>Technical solution</h2>
     <img class="project_img" src="img/computerbox.jpg" alt="Computer Box" />
-    <h3>Sensors</h3>
-    <ul>
-        <li>Weight changes of the whole bee hive</li>
-        <li>Temperature on defined spots</li>
-        <li>Humidity inside and outside the hive</li>
-        <li>Illumination of flight entrance</li>
-        <li>Measurement of barometric pressure</li>
-    </ul>
-    <h4>1. Scale</h4>
-    <p>I chose Bosche H40A load cell (200 kg) to measure the weight and fixed it to two aluminium plates. I used those which I had readily available, but normally I would prefer slightly larger ones. OpenScale microcontroller from Sparkfun has been used to convert the signal from the scale and communicate with Arduino over serial interface.</p>
+    <h3>Microcontroller</h3>
+    <p>Core of the system is Arduino MKR Fox 1200. This is a microcontroller supporting the low power <a href="https://www.sigfox.com/">Sigfoxk</a> wireless transmission system. On a battery, this is able to send data for a couple of months without recharging.</p>
+    <h3>Scale</h3>
+    <p>For measurement of weight changes I chose Bosche H40A load cell (200 kg) and fixed it to two aluminium plates. Arduino Uno based OpenScale microcontroller from Sparkfun has been used to convert the signal from the scale and communicate with Arduino over serial interface.</p>
     <img class="project_img" src="img/scale1.jpg" alt="Scale" />
-    <h4>2. Temperature sensors</h4>
-    <p>Several temperature sensors are used in the project:</p>
+    <h4>Weather station</h4>
+    <p>Several sensors are used in the project:</p>
     <ul>
         <li>On-board temperature sensor from OpenScale to measure temperature in the computer case. </li>
         <li>Temperature and humidity sensor DHT22 to measure temperature and humidity inside the bee hive.</li>
         <li>BMP280 barometric pressure sensor used also for measurement of outside temperature.</li>
     </ul>
-    <h3>Controller</h3>
-    <ol>
-        <li>Remote radio communication</li>
-        <li>Low power</li>
-        <li>Coding</li>
-    </ol>
-    <p>I use <a href="https://www.arduino.cc/en/Main.ArduinoBoardMKRFox1200">MKR FOX 1200</a> for the radio communication. This Arduino module uses <a href="https://www.sigfox.com/">Sigfox network</a> to send messages. The advantage of this is the simple low weight communication protocoll enabling low energy consumption, high signal coverage and low costs.</p>
     <h3>Schema</h3>
-    <img id="schema" src="img/schema.svg" alt="schema" />
+    <img id="schema" src="img/schema.png" alt="schema" />
     <h4>Code</h4>
     <p>See my <a class="fab fa-github icon" href="https://github.com/michsvob/bienenprojekt">&nbsp; Github project page</a> for the Arduino source code.</p>
    
-   <h3>Presentation</h3>
-   <ul>
-        <li>Cloud dashboard</li>
-        <li>Notifications</li>
-    </ul>
+   <h3>Presentation layer</h3>
    <p>For small scale IoT projects, Thinger.io is a suitable platform, since it has some free features. See the <a href="https://console.thinger.io/#/dashboard/Bienenvolk1?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJEYXNoYm9hcmRfQmllbmVudm9sazEiLCJ1c3IiOiJtaWNob3NsYXYifQ.Cgl5FwivATOmBpEO86_56jVkOl33d4sCl7ExWaVa5Cg">prototype dashboard.</a></p>
-    <h3>Ideas for improvement</h3>
-    <ul>
-        <li>Camera</li>
-        <li>Extension for another bee hive</li>
-    </ul>
 </section>
    
 </div>
