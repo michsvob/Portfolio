@@ -10,9 +10,9 @@
         <script src="js/scripts.js"></script>
         <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
     </head>
-    
+
     <body onload=setPaths()>
-        
+
 <header class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1> Bee Project</h1>
@@ -26,7 +26,7 @@
 </button>
 <div class="collapse navbar-collapse" id="collapsibleNavbar">
 <ul data-toggle="collapse" data-target=".navbar-collapse.show" class="navbar-nav" >
-<li><a class="nav-link active" href="#project_scope">Scope</a></li> 
+<li><a class="nav-link active" href="#project_scope">Scope</a></li>
 <li><a class="nav-link" href="#technical_solution">Solution</a></li>
 </ul>
 </div>
@@ -45,7 +45,7 @@
     <h2>Technical solution</h2>
     <img class="project_img" src="img/computerbox.jpg" alt="Computer Box" />
     <h3>Microcontroller</h3>
-    <p>Core of the system is Arduino MKR Fox 1200. This is a microcontroller supporting the low power <a href="https://www.sigfox.com/">Sigfoxk</a> wireless transmission system. On a battery, this is able to send data for a couple of months without recharging.</p>
+    <p>Core of the system is Arduino MKR Fox 1200. This is a microcontroller supporting the low power <a href="https://www.sigfox.com/">Sigfox</a> wireless transmission system. On a battery, this is able to send data for a couple of months without recharging.</p>
     <h3>Scale</h3>
     <p>For measurement of weight changes I chose Bosche H40A load cell (200 kg) and fixed it to two aluminium plates. Arduino Uno based OpenScale microcontroller from Sparkfun has been used to convert the signal from the scale and communicate with Arduino over serial interface.</p>
     <img class="project_img" src="img/scale1.jpg" alt="Scale" />
@@ -60,31 +60,29 @@
     <img id="schema" class="project_img" src="img/schema.png" alt="schema" />
     <h4>Code</h4>
     <p>See my <a class="fab fa-github icon" href="https://github.com/michsvob/bienenprojekt">&nbsp; Github project page</a> for the Arduino source code.</p>
-   
-   <h3>Live data</h3>
-   <p>For small scale IoT projects, Thinger.io is a suitable platform, since it has some free features. See the <a href="https://console.thinger.io/#/dashboard/Bienenvolk1?authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJEYXNoYm9hcmRfQmllbmVudm9sazEiLCJ1c3IiOiJtaWNob3NsYXYifQ.Cgl5FwivATOmBpEO86_56jVkOl33d4sCl7ExWaVa5Cg">prototype dashboard.</a></p>
-</section>
-   
-</div>
 
-<br />
-<br />
+   <h3>Live data</h3>
+   <a href="bienenweb/index.php">live data</a>
+</section>
+</div>
+<br>
+<br>
+<br>
+<br>
 </main>
 
  <footer class="navbar navbar-light bg-light fixed-bottom">
-       
-        <p>
+    <p>
         <a id="eMail" class="fas fa-envelope-open icon" onclick="decode_eMail()">&nbsp; E-Mail</a>
         <a class="fab fa-linkedin icon" href="https://www.linkedin.com/in/michalsvoboda1/?locale=en_US">&nbsp; LinkedIn</a>
-        <br />
+        <br/>
         <a class="fab fa-github-square icon" href="https://github.com/michsvob">&nbsp; Github</a>
-        
         </p>
-         <p class="d-none d-md-block float-right">
+        <p class="d-none d-md-block float-right">
             <a href="#">Back to top</a>
         </p>
-        
-        
+
+
 </footer>
 </body>
 </html>
